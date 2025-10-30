@@ -13,10 +13,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
             background-color: beige;
         }
         p{
-            margin:0 ;
-            padding: 10px;
+            padding: 10px
         }
         header{
+            padding: 20px;
             background-color: #403F6F;
             color: beige;
             text-align: center;
@@ -25,7 +25,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
             background-color: #403F6F;
             color: beige;
             text-align: center;
-            position: absolute;
+            position: relative;
             bottom: 0px;
             width: 100%;
             height: 15%;
@@ -37,7 +37,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
             align-items: center;
             text-align: center;
         }
-        .modulos{
+        .proyectos{
             margin: auto;
             color: beige;
             margin: 10px;
@@ -49,4 +49,48 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
         a{
             color: red;
             text-decoration: none;
+        }
+        h2{
+            text-align: center;
+        }
+        
+        .formulario{
+            position: relative;
+            
+        }
+        .centrar{
+            position: relative;
+            left: 42%;
+            width: 30%
+        }
+        .obligatorio{
+            background-color: lightgoldenrodyellow;
+        }
+        .saltar{
+            display: block;
+            margin: 10px,10px;
+            text-align: center;
+            
+        }
+        
+        .error{
+            color: red;
+        }
+        
+        .principal {
+            width: 70%;
+            border-collapse: collapse;
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .principal td {
+            padding: 10px;
+            border: 1px solid #3a3a3a;
+            vertical-align: middle;
+        }
+
+        table img {
+            width: 40px;
+            height: 40px;
         }
