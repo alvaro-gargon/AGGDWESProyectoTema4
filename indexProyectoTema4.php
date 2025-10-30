@@ -9,53 +9,91 @@
 <body>
     <header>
         <p>PROYECTO TEMA 4</p>
+        <a href="../AGGDWESProyectoDWES/indexProyectoDWES.php"><button name="Volver">Volver</button></a>
     </header>
-    <!-- Agradecimientos a Gonzalo Junquera por la maquetacion -->
     <div class="contenedor">
+        <table class="secundario">
+            <tr>
+                <td></td>
+                <td>ED</td>
+                <td>EE</td>
+            </tr>
+            <tr>
+                <td>S.C.C</td>
+                <td><a href="mostrarcodigo/muestraScriptCreacion.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <td>
+                    <!-- <a href=""><img src="webroot/images/play.png" alt="boton_play"></a>-->
+                    <!-- <a href=""><img src="webroot/images/code.png" alt="boton_code"></a>-->
+                </td>
+            </tr>
+            <tr>
+                <td>S.C.I</td>
+                <td><a href="mostrarcodigo/muestraScriptCargaInicial.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <td>
+                    <!-- <a href=""><img src="webroot/images/play.png" alt="boton_play"></a>-->
+                    <!-- <a href=""><img src="webroot/images/code.png" alt="boton_code"></a>-->
+                </td>
+            </tr>
+            <tr>
+                <td>S.B</td>
+                <td><a href="mostrarcodigo/muestraScriptBorrado.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <td>
+                    <!-- <a href=""><img src="webroot/images/play.png" alt="boton_play"></a>-->
+                    <!-- <a href=""><img src="webroot/images/code.png" alt="boton_code"></a>-->
+                </td>
+            </tr>
+        </table>
+        
         <table class="principal">
+            <tr>
+                <th>Num</th>
+                <th>Enunciado</th>
+                <th colspan="2">PDO</th>
+                <th colspan="2">MySQLi</th>
+            </tr>
             <tr>
                 <td>1</td>
                 <td>Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
-                <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
+                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
             </tr>
             <tr>
                 <td>2</td>
                 <td>Mostrar el contenido de la tabla Departamento y el número de registros.</td>
-                <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
+                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
             </tr>
             <tr>
                 <td>3</td>
                 <td>Formulario para añadir un departamento a la tabla Departamento con validación de entrada y
                     control de errores.
                 </td>
-                <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
+                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
             </tr>
             <tr>
                 <td>4</td>
                 <td>Formulario de búsqueda de departamentos por descripción (por una parte del campo
                     DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).
                 </td>
-                <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
+                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
             </tr>
             <tr>
                 <td>5</td>
                 <td>Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
                     insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.
                 </td>
-                <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
+                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
             </tr>
             <tr>
                 <td>6</td>
                 <td>Pagina web que cargue registros en la tabla Departamento desde un array departamentosnuevos
                     utilizando una consulta preparada
                 </td>
-                <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
+                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
             </tr>
             <tr>
                 <td>7</td>
@@ -63,8 +101,8 @@
                     Departamento de nuestra base de datos. (IMPORTAR). El fichero importado se encuentra en el
                     directorio .../tmp/ del servidor.
                 </td>
-                <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
+                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
             </tr>
             <tr>
                 <td>8</td>
@@ -72,28 +110,14 @@
                     fichero departamento.xml. (COPIA DE SEGURIDAD / EXPORTAR). El fichero exportado se
                     encuentra en el directorio .../tmp/ del servidor.
                 </td>
-                <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
-            </tr>
-            <tr>
-                <td>9</td>
-                <td>Aplicación resumen MtoDeDepartamentosTema4. (Incluir PHPDoc y versionado en el repositorio
-                    GIT).
-                </td>
-                <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
-            </tr>
-            <tr>
-                <td>10</td>
-                <td>Aplicación resumen MtoDeDepartamentos POO y multicapa.</td>
-                <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>
-                <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>
+                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
+                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
             </tr>
         </table>
     </div>
     <footer>
-        <p><a href="../AGGDWESProyectoDWES/indexProyectoDWES.php">Álvaro García González</a></p>
-        <p>Última actualización <time datetime="2025-10-29">29/10/2025</time></p>
+        <p><a href="../index.html">Álvaro García González</a></p>
+        <p>Última actualización <time datetime="2025-10-30">30/10/2025</time></p>
     </footer>
 </body>
 </html>

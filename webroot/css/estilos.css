@@ -88,8 +88,36 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
             padding: 10px;
             border: 1px solid #3a3a3a;
             vertical-align: middle;
+            text-align: left;
+        }
+        .principal th {
+            padding: 10px;
+            border: 1px solid #3a3a3a;
+            vertical-align: middle;
+            text-align: left;
+        }
+        
+        .secundario {
+            width: 70%;
+            border-collapse: collapse;
+            text-align: left;
+            margin-bottom: 30px;
         }
 
+        .secundario td {
+            padding: 10px;
+            border: 1px solid #3a3a3a;
+            vertical-align: middle;
+            text-align: left;
+        }
+        
+        .secundario td:first-child{
+            padding: 10px;
+            border: 0px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        
         table img {
             width: 40px;
             height: 40px;
