@@ -54,8 +54,8 @@
             <tr>
                 <td>1</td>
                 <td>Conexión a la base de datos con la cuenta usuario y tratamiento de errores.</td>
-                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
-                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
+                <td><a href="codigoPHP/ejercicio01.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio01.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
             </tr>
             <tr>
                 <td>2</td>
