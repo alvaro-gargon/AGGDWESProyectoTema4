@@ -19,7 +19,7 @@
                 <td>EE</td>
             </tr>
             <tr>
-                <td>S.C.C</td>
+                <td>Script Creacion</td>
                 <td><a href="mostrarcodigo/muestraScriptCreacion.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 <td>
                     <!-- <a href=""><img src="webroot/images/play.png" alt="boton_play"></a>-->
@@ -27,7 +27,7 @@
                 </td>
             </tr>
             <tr>
-                <td>S.C.I</td>
+                <td>Script Carga Inicial</td>
                 <td><a href="mostrarcodigo/muestraScriptCargaInicial.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 <td>
                     <!-- <a href=""><img src="webroot/images/play.png" alt="boton_play"></a>-->
@@ -35,7 +35,7 @@
                 </td>
             </tr>
             <tr>
-                <td>S.B</td>
+                <td>Script Borrado</td>
                 <td><a href="mostrarcodigo/muestraScriptBorrado.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
                 <td>
                     <!-- <a href=""><img src="webroot/images/play.png" alt="boton_play"></a>-->

@@ -19,7 +19,8 @@
     <?php
     //definimos y usamos las constantes dbname,username y password de la base de datos
     //dsn tiene el valor del host y del nombre de la base de datos. 
-    const DSN= 'mysql:host=10.199.9.144;dbname:DBAGGDWESProyectoTema4';
+    const DSN= 'mysql:host=192.168.1.134;dbname:DBAGGDWESProyectoTema4';
+    //const DSN= 'mysql:host=10.199.9.144;dbname:DBAGGDWESProyectoTema4';
     const username= 'userAGGDWESProyectoTema4';
     const password= 'paso';
     
@@ -30,19 +31,23 @@
         "TIMEOUT"
     );
     
-        echo ('<p>Conexion correcta</p>');
+        echo ('<h2>Conexion correcta</h2>');
         try{
             $miDB = new PDO(DSN,username,password);
             $miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            echo '<p class="centrar">';
             foreach ($aattributes as $valor) {
                 try{
+                
                 echo "PDO::ATTR_$valor: ";
+                echo '<br>';
                 } catch (PDOException $miExceptionPDO){
                     echo'Error: '.$miExceptionPDO->getMessage();
                     echo '<br>';
                     echo'Código de error: '.$miExceptionPDO->getCode();
                 }
             }
+            echo '</p>';
         } catch (PDOException $miExceptionPDO){
             echo'Error: '.$miExceptionPDO->getMessage();
             echo '<br>';
