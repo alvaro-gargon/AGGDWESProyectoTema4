@@ -117,7 +117,7 @@
     </div>
     <footer>
         <p><a href="../index.html">Álvaro García González</a></p>
-        <p>Última actualización <time datetime="2025-10-30">30/10/2025</time></p>
+        <p>Última actualización <time datetime="2025-11-05">05/11/2025</time></p>
     </footer>
 </body>
 </html>

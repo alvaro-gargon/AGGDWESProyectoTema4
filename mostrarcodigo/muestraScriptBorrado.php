@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <p>Script de creación Base de datos</p>
+        <p>Script de borrado Base de datos</p>
         <a href="../indexProyectoTema4.php"><button name="Volver">Volver</button></a>
     </header>
     <?php
