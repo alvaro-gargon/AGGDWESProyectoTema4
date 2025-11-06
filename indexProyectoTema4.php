@@ -60,8 +60,8 @@
             <tr>
                 <td>2</td>
                 <td>Mostrar el contenido de la tabla Departamento y el número de registros.</td>
-                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
-                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
+                <td><a href="codigoPHP/ejercicio02.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio02.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
             </tr>
             <tr>
                 <td>3</td>
