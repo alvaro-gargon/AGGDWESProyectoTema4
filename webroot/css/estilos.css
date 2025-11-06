@@ -76,12 +76,42 @@ Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this t
         }
         .saltar{
             display: block;
-            margin: 10px,10px;
+            margin: 10px 10px;
             text-align: center;
         }
         
         .error{
             color: red;
+        }
+        
+        .departamento{
+            margin: 30px 30px;
+            position: relative;
+            left: 15%;
+            width: 70%;
+            border-collapse: separate;
+            border-spacing: 0;
+            text-align: left;
+            box-shadow: 5px 5px #3a3a3a;
+            overflow: hidden;
+        }
+        
+        .departamento td{
+            padding: 10px;
+            border: 1px solid #3a3a3a;
+            vertical-align: middle;
+            text-align: left;
+            
+        }
+        
+        .departamento th{
+            padding: 10px;
+            border: 2px solid #3a3a3a;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            vertical-align: middle;
+            text-align: left;
+            background-color: lightblue;
         }
         
         .principal {
