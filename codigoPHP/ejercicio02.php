@@ -12,7 +12,7 @@
      * Fecha: 06/11/2025
      * Uso: Conexión base de datos */ ?>
     <header>
-        <h1>Ejercico 1 Tema 4</h1>
+        <h1>Ejercico 2 Tema 4</h1>
         <a href="../indexProyectoTema4.php"><button name="Volver">Volver</button></a>
         <a href="ejercicio01.php"></a>
     </header>
@@ -26,29 +26,11 @@
     const password= 'paso';
     //$DSNN='mysql:host='.$_SERVER['SERVER_ADDR'].';dbname:DBAGGDWESProyectoTema4';
     //array con los nombres de los atributos de PDO
-    $aattributes = array(
-        "AUTOCOMMIT", "ERRMODE", "CASE", "CLIENT_VERSION", "CONNECTION_STATUS",
-        "ORACLE_NULLS", "PERSISTENT", "PREFETCH", "SERVER_INFO", "SERVER_VERSION",
-        "TIMEOUT"
-    );
     
-        echo ('<h2>Conexion correcta</h2>');
+        echo ('<h2>Mostrar tabla departamento</h2>');
         try{
             $miDB = new PDO(DSN,USERNAME,password);
-            //$miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo '<p class="centrar">';
-            foreach ($aattributes as $valor) {
-                try{
-                
-                echo "PDO::ATTR_$valor: ";
-                echo '<br>';
-                } catch (PDOException $miExceptionPDO){
-                    echo'Error: '.$miExceptionPDO->getMessage();
-                    echo '<br>';
-                    echo'Código de error: '.$miExceptionPDO->getCode();
-                }
-            }
-            echo '</p>';
+            $qConsulta=$miDB->query("select * from T02_Departamento");
         } catch (PDOException $miExceptionPDO){
             echo'Error: '.$miExceptionPDO->getMessage();
             echo '<br>';
@@ -61,9 +43,7 @@
         ?>
     <footer>
         <p><a href="../../index.html">Álvaro García González</a></p>
-        <p>Última actualización <time datetime="2025-11-03">03/11/2025</time></p>
+        <p>Última actualización <time datetime="2025-11-06">06/11/2025</time></p>
     </footer>
 </body>
 </html>
-
-
