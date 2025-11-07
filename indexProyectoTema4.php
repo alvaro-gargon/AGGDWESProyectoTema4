@@ -68,8 +68,8 @@
                 <td>Formulario para añadir un departamento a la tabla Departamento con validación de entrada y
                     control de errores.
                 </td>
-                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
-                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
+                <td><a href="codigoPHP/ejercicio03.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
+                <td><a href="mostrarcodigo/muestraEjercicio03.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
             </tr>
             <tr>
                 <td>4</td>
