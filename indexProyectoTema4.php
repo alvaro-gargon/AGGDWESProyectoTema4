@@ -76,8 +76,8 @@
                 <td>Formulario de búsqueda de departamentos por descripción (por una parte del campo
                     DescDepartamento, si el usuario no pone nada deben aparecer todos los departamentos).
                 </td>
-                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
-                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
+                <td><a href="codigoPHP/ejercicio04.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio04.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
             </tr>
             <tr>
                 <td>5</td>
