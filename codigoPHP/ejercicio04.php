@@ -92,7 +92,7 @@
             $miDB->exec("use DBAGGDWESProyectoTema4;");
             $sql = <<<sql
                 select * from T02_Departamento
-                where lower(T02_DescDepartamento) like ?
+                where T02_DescDepartamento like ?
             sql;
             
             $consulta = $miDB->prepare($sql);

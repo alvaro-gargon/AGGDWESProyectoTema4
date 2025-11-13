@@ -84,8 +84,8 @@
                 <td>Pagina web que añade tres registros a nuestra tabla Departamento utilizando tres instrucciones
                     insert y una transacción, de tal forma que se añadan los tres registros o no se añada ninguno.
                 </td>
-                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
-                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
+                <td><a href="codigoPHP/ejercicio05.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio05.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
             </tr>
             <tr>
                 <td>6</td>
