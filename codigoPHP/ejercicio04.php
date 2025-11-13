@@ -27,12 +27,9 @@
     //$DSNN='mysql:host='.$_SERVER['SERVER_ADDR'].';dbname:DBAGGDWESProyectoTema4';
     //array con los nombres de los atributos de PDO
     $miDB; // variable para realizar la conexión a la base de datos
-        $sql; // variable para guardar consulta para la base de datos
+        
         $terminoBusqueda = '%%'; // termino de busqueda explicado al usarlo
-        $consulta; // variable para recoger el resultado de la consulta a la base de datos 
-        $aDepartamentos; // devolvemos la consulta en un array y lo guardamos aqui
-        $registro; // al recorrer la consulta vamos obteniendo registros y los recogemos aquí
-        $miExceptionPDO; // para recoger los errores al manejar la clase PDO
+        
        
         $entradaOK = true; //Variable que nos indica que todo va bien
         $aErrores = [  //Array donde recogemos los mensajes de error
@@ -71,8 +68,8 @@
             // Preparamos el término de búsqueda con comodines y en minúsculas para la búsqueda LIKE. 
             // Los % indica que puede tener cualquier cosa antes y después.
             // Si la descripción está vacía, el término será '%%', devolviendo todos los resultados.
-            $terminoBusqueda = '%'.strtolower($aRespuestas['T02_DescDepartamento']).'%';
-            // Usamos LOWER() en el campo de la DB y en el término de búsqueda para garantizar que la búsqueda sea insensible a mayúsculas/minúsculas.
+            $terminoBusqueda = '%'.$aRespuestas['T02_DescDepartamento'].'%';
+            
             
         }
 
