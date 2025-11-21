@@ -50,7 +50,7 @@
         try{
             $miDB->beginTransaction();
             foreach ($aInsert as $registro){
-                $insertql='insert into T02_Departamento values ('.$aInsert['codigoDepartamento'].','.$aInsert['descripcionDepartamento'].','.$aInsert['volumenDepartamento'].',now(),null)';
+                $insertql="insert into T02_Departamento values ('".$registro['codigoDepartamento']."','".$registro['descripcionDepartamento']."','".$registro['volumenDepartamento']."',now(),null)";
                 $miDB->query($insertql);
             }
             $miDB->commit();
