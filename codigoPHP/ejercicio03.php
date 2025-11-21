@@ -65,7 +65,7 @@
             
             //insert del departamento correspondiente
             $qinssertSQL="insert into T02_Departamento values
-            ('{$aRespuestas['codigoDepartamento']}','{$aRespuestas['descripcionDepartamento']}',now(),'{$aRespuestas['volumenDepartamento']}',null);";
+            ('{$aRespuestas['codigoDepartamento']}','{$aRespuestas['descripcionDepartamento']}',{$aRespuestas['volumenDepartamento']},now(),null);";
             
      
             $fecha_actual = new DateTime("now",new DateTimeZone('Europe/Madrid'));
@@ -114,8 +114,8 @@
             echo '<tr>';
             echo '<th>T02_CodDepartamento</th>';
             echo '<th>T02_DescDepartamento</th>';
-            echo '<th>T02_FechaCreacionDepartamento</th>';
             echo '<th>T02_VolumenDeNegocio</th>';
+            echo '<th>T02_FechaCreacionDepartamento</th>';
             echo '<th>T02_FechaBajaDepartamento</th>';
             echo '</tr>';
             //el bucle while se ejecuta hasta que se acaban las filas, ya que cuando eso ocurre fetch() devuelve false
@@ -125,9 +125,9 @@
                 echo '<td>'.$registro['T02_CodDepartamento'].'</td>';
                 $sDescripcion= strtoupper($registro["T02_DescDepartamento"]); //strtoupper convierte el texto en mayusculas
                 echo '<td>'.$sDescripcion.'</td>';
-                echo '<td>'.$registro["T02_FechaCreacionDepartamento"].'</td>';
                 // formateamos el float para que se vea en €
                 echo '<td>'.number_format($registro["T02_VolumenDeNegocio"],2,',','.').' €</td>';
+                echo '<td>'.$registro["T02_FechaCreacionDepartamento"].'</td>';
                 echo '<td>'.$registro["T02_FechaBajaDepartamento"].'</td>';
                 echo '</tr>';
             }
@@ -150,6 +150,7 @@
     <div class="formulario">       
     <form action="<?php echo $_SERVER['PHP_SELF'];?>" method="post">
         <div class="centrar">
+            <p class="error"><?php echo($aErrores['codigoExiste'])?></p>
             <p>
               <label>1. Codigo del departamento (3 letras en mayuscula)</label><br>
               <input class="obligatorio" type="text" name="codigoDepartamento" 

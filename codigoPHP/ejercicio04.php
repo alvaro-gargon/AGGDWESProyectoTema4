@@ -76,7 +76,7 @@
        ?>
         <h2>Buscar departamento</h2>
         <form action="<?php echo $_SERVER["PHP_SELF"]; ?>" method="post">
-            <label for="T02_DescDepartamento">Introduce Departamento a Buscar: </label>
+            <label for="T02_DescDepartamento">Introduce Departamento a Buscar a traves de su descripción: </label>
             <br>
             <input type="text" name="T02_DescDepartamento" class="obligatorio" value="<?php echo $_REQUEST['T02_DescDepartamento']??'' ?>">
             <span class="error"><?php echo $aErrores['T02_DescDepartamento'] ?></span>

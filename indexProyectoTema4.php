@@ -92,8 +92,8 @@
                 <td>Pagina web que cargue registros en la tabla Departamento desde un array departamentosnuevos
                     utilizando una consulta preparada
                 </td>
-                <!--  <td><a href=""><img src="webroot/images/play.png" alt="boton_play"></a></td>-->
-                <!--  <td><a href=""><img src="webroot/images/code.png" alt="boton_code"></a></td>-->
+                <td><a href="codigoPHP/ejercicio06.php"><img src="webroot/images/play.png" alt="boton_play"></a></td>
+                <td><a href="mostrarcodigo/muestraEjercicio06.php"><img src="webroot/images/code.png" alt="boton_code"></a></td>
             </tr>
             <tr>
                 <td>7</td>
