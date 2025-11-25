@@ -17,13 +17,10 @@
     </header>
         
     <?php
+    require_once '../config/ConfDBPDO.php';
     //definimos y usamos las constantes dbname,username y password de la base de datos
     //dsn tiene el valor del host y del nombre de la base de datos. 
-    //const DSN= 'mysql:host=192.168.1.134;dbname:DBAGGDWESProyectoTema4';
-    const DSN= 'mysql:host=10.199.9.114;dbname:DBAGGDWESProyectoTema4';
-    const USERNAME= 'userAGGDWESProyectoTema4';
-    const PASSWORD= 'paso';
-    //$DSNN='mysql:host='.$_SERVER['SERVER_ADDR'].';dbname:DBAGGDWESProyectoTema4';
+    
     //array con los nombres de los atributos de PDO
     $aattributes = array(
         "AUTOCOMMIT", "ERRMODE", "CASE", "CLIENT_VERSION", "CONNECTION_STATUS",
@@ -33,7 +30,7 @@
     
         echo ('<h2>Conexion correcta</h2>');
         try{
-            $miDB = new PDO(DSN,USERNAME,PASSWORD);
+            $miDB = new PDO(DNS, USERNAME, PASSWORD);
             //$miDB->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             echo '<p class="centrar">';            
             foreach ($aattributes as $valor) {

@@ -17,18 +17,13 @@
     </header>
         
     <?php
-    //definimos y usamos las constantes dbname,username y password de la base de datos
-    //dsn tiene el valor del host y del nombre de la base de datos. 
-    //const DSN= 'mysql:host=192.168.1.134;dbname:DBAGGDWESProyectoTema4';
-    const DSN= 'mysql:host=10.199.9.114;dbname:DBAGGDWESProyectoTema4';
-    const USERNAME= 'userAGGDWESProyectoTema4';
-    const PASSWORD= 'paso';
-    //$DSNN='mysql:host='.$_SERVER['SERVER_ADDR'].';dbname:DBAGGDWESProyectoTema4';
+    require_once '../config/ConfDBPDO.php';
+    
     
         echo ('<h2>Inserts con  transcciones a la tabla departamento</h2>');
         
             //establezco conexion
-            $miDB = new PDO(DSN,USERNAME,PASSWORD);
+            $miDB = new PDO(DNS,USERNAME,PASSWORD);
             //uso el comando use porque sino, no detecta que estoy usando la base de datos
             $miDB->exec("use DBAGGDWESProyectoTema4;");
             $aInsert = 
