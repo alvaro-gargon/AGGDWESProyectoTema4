@@ -14,22 +14,16 @@
     <header>
         <h1>Ejercico 2 Tema 4</h1>
         <a href="../indexProyectoTema4.php"><button name="Volver">Volver</button></a>
-        <a href="ejercicio01.php"></a>
     </header>
         
     <?php
-    //definimos y usamos las constantes dbname,username y password de la base de datos
-    //dsn tiene el valor del host y del nombre de la base de datos. 
-    const DSN= 'mysql:host=192.168.1.134;dbname:DBAGGDWESProyectoTema4';
-    //const DSN= 'mysql:host=10.199.9.114;dbname:DBAGGDWESProyectoTema4';
-    const USERNAME= 'userAGGDWESProyectoTema4';
-    const PASSWORD= 'paso';
-    //$DSNN='mysql:host='.$_SERVER['SERVER_ADDR'].';dbname:DBAGGDWESProyectoTema4';
+    require_once '../config/ConfDBPDO.php';
+    
     
         echo ('<h2>Mostrar tabla departamento</h2>');
         try{
             //establezco conexion
-            $miDB = new PDO(DSN,USERNAME,PASSWORD);
+            $miDB = new PDO(DNS,USERNAME,PASSWORD);
             //uso el comando use porque sino, no detecta que estoy usando la base de datos
             $miDB->exec("use DBAGGDWESProyectoTema4;");
             $qConsulta = $miDB->query("select * from T02_Departamento"); //consulta para seleccionar todos los datos de la tabla
@@ -46,7 +40,7 @@
             while ($registro = $qConsulta->fetch()) {
                 echo '<tr>';
                 echo '<td>'.$registro['T02_CodDepartamento'].'</td>';
-                $sDescripcion= strtoupper($registro["T02_DescDepartamento"]);
+                $sDescripcion= strtoupper($registro["T02_DescDepartamento"]); //strtoupper convierte el texto en mayusculas
                 echo '<td>'.$sDescripcion.'</td>';
                 echo '<td>'.$registro["T02_FechaCreacionDepartamento"].'</td>';
                 // formateamos el float para que se vea en €
