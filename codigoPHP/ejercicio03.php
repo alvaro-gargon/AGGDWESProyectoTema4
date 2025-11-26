@@ -58,9 +58,7 @@
             ];
             
             
-            //insert del departamento correspondiente
-            $qinssertSQL="insert into T02_Departamento values
-            ('{$aRespuestas['codigoDepartamento']}','{$aRespuestas['descripcionDepartamento']}',{$aRespuestas['volumenDepartamento']},now(),null);";
+            
             
      
             $fecha_actual = new DateTime("now",new DateTimeZone('Europe/Madrid'));
@@ -82,13 +80,14 @@
                 if($valor!=null){
                     $entradaOK=false;
                 }else{
-                    if(empty($_REQUEST["$clave"])){
-                        $aRespuestas[$clave]='No se ha rellenado';
-                    }else{
-                        $aRespuestas[$clave]=$_REQUEST["$clave"];
+                    if (!isset($_REQUEST[$clave]) || $_REQUEST[$clave] === "") {//no uso empty porque daria error si el valor de volumen es 0
+                        $aRespuestas[$clave] = null;
+                    } else {
+                        $aRespuestas[$clave] = $_REQUEST[$clave];
                     }
                 }
             }
+
                                                                                             //el %...% es para que si esta vacio, muestre todos
             $consultasql=$miDB->query("SELECT * FROM T02_Departamento WHERE T02_CodDepartamento='%{$aRespuestas['codigoDepartamento']}%'");//->fetchAll(PDO::FETCH_OBJ);
             $resultado=$consultasql;
@@ -101,8 +100,14 @@
         }
         
         
-        if(isset($_REQUEST['enviar']) && $entradaOK==true && $departamentoExiste==false){
+        if($entradaOK==true && $departamentoExiste==false){
             //codigo que se ejecuta cuando envias el formulario
+            
+            //insert del departamento correspondiente
+            $qinssertSQL="insert into T02_Departamento values
+            ('{$aRespuestas['codigoDepartamento']}','{$aRespuestas['descripcionDepartamento']}',{$aRespuestas['volumenDepartamento']},now(),null);";
+            
+            echo "<pre>$qinssertSQL</pre>";
             $miDB->query($qinssertSQL);
             $qConsulta = $miDB->query('select * from T02_Departamento');
             echo '<table class="departamento">';
@@ -117,15 +122,15 @@
             //declaramos la variable $registro  para poder trabajar con los valores
             while ($registro = $qConsulta->fetchObject()) {
                 echo '<tr>';
-                echo '<td>'.$registro['T02_CodDepartamento'].'</td>';
-                $sDescripcion= strtoupper($registro["T02_DescDepartamento"]); //strtoupper convierte el texto en mayusculas
-                echo '<td>'.$sDescripcion.'</td>';
-                // formateamos el float para que se vea en €
-                echo '<td>'.number_format($registro["T02_VolumenDeNegocio"],2,',','.').' €</td>';
-                echo '<td>'.$registro["T02_FechaCreacionDepartamento"].'</td>';
-                echo '<td>'.$registro["T02_FechaBajaDepartamento"].'</td>';
+                echo '<td>' . $registro->T02_CodDepartamento . '</td>';
+                $sDescripcion = strtoupper($registro->T02_DescDepartamento);
+                echo '<td>' . $sDescripcion . '</td>';
+                echo '<td>' . number_format($registro->T02_VolumenDeNegocio, 2, ',', '.') . ' €</td>';
+                echo '<td>' . $registro->T02_FechaCreacionDepartamento . '</td>';
+                echo '<td>' . $registro->T02_FechaBajaDepartamento . '</td>';
                 echo '</tr>';
             }
+          
             echo '</table>';
             
             //forma incorrecta (con claves de array nombradas con comas)
